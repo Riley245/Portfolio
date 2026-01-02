@@ -1,0 +1,232 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #F7F3E9;
+  color: #333333;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background: #EDE8DB;
+  padding: 25px 15px;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+img {
+  max-width: 50%;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.sidebar h2 {
+  color: #2E7D32;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sidebar a {
+  display: block;
+  color: #333333;
+  text-decoration: none;
+  margin: 12px 0;
+  padding: 8px;
+  border-radius: 8px;
+  transition: 0.3s;
+  font-size: 0.95rem;
+}
+
+.sidebar a:hover {
+  background: #81C784;
+  color: #F7F3E9;
+}
+
+/* Hamburger */
+.menu-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #2E7D32;
+  z-index: 1100;
+  display: none;
+}
+
+/* Main Content */
+.content {
+  margin-left: 220px;
+  padding: 40px 40px 60px 40px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Section as card */
+section {
+  background: #EDE8DB;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-size: 2.6rem;
+  color: #2E7D32;
+  margin-bottom: 15px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #81C784;
+}
+
+p {
+  max-width: 700px;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+/* Inner cards (skills/projects) */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.card {
+  background: #F7F3E9;
+  padding: 18px;
+  border-radius: 12px;
+  transition: transform 0.3s, background 0.3s;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  background: #E0DCCF;
+}
+
+.card h3 {
+  color: #2E7D32;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+/* Button */
+.btn,
+.btn-hero {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 22px;
+  background: #8D6E63;
+  color: #F7F3E9;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.3s;
+}
+
+.btn:hover,
+.btn-hero:hover {
+  background: #81C784;
+}
+
+/* Forms */
+input,
+textarea {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #F7F3E9;
+  color: #333333;
+  border: 1px solid #CCC;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #999999;
+}
+
+.email-icon {
+  color: #D44638;
+  font-size: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.red{
+  color: #D44638;
+  text-decoration: none;
+}
+
+.github-icon {
+  color: #333333;
+  font-size: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.grey{
+  color: #585858;
+  text-decoration: none;
+}
+
+.linkedin-icon {
+  color: #0077B5;
+  font-size: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.eve{
+  color: #0077B5;
+  text-decoration: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  .content {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .content {
+    margin-left: 0;
+    padding-top: 70px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}

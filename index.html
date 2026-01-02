@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Menu Button -->
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb-8dZy4ihdefD2luVWeVMhAqpX7C4FJxAnQ&s" alt="#">
+    <h2>Raheel Rahmat</h2>
+    <a href="#home" onclick="toggleMenu()">Home</a>
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#skills" onclick="toggleMenu()">Skills</a>
+    <a href="#projects" onclick="toggleMenu()">Projects</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+
+    <!-- HOME -->
+    <section id="home">
+      <h1>Hi, I'm a Web Developer 👋</h1>
+      <p>I build modern, responsive websites that look great on any device.</p>
+      <p>I focus on clean code, smooth UX, and fast loading times to provide the best user experience.</p>
+      <a href="#projects" class="btn">View My Work</a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I'm passionate about creating web solutions that make a difference. I enjoy turning ideas into interactive
+        digital experiences.</p>
+      <p>Started with HTML & CSS and expanded into JavaScript and modern frameworks like React and Node.js.</p>
+      <p>Outside coding, I love exploring UI/UX design trends and working on personal projects to sharpen my skills.</p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>HTML5</h3>
+          <p>Semantic markup, accessibility, SEO-friendly structure.</p>
+        </div>
+        <div class="card">
+          <h3>CSS3</h3>
+          <p>Flexbox, Grid, responsive layouts, animations.</p>
+        </div>
+        <div class="card">
+          <h3>JavaScript</h3>
+          <p>ES6+, DOM manipulation, interactive functionality.</p>
+        </div>
+        <div class="card">
+          <h3>Bootstrap</h3>
+          <p>Responsive grid system, prebuilt components, and utility classes.</p>
+        </div>
+        <div class="card">
+          <h3>React</h3>
+          <p>Component-based architecture, hooks, reusable UI components.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Portfolio Website</h3>
+          <p>Responsive personal site to showcase skills and projects.</p>
+        </div>
+        <div class="card">
+          <h3>Landing Page</h3>
+          <p>Modern product landing page with clean design and smooth animations.</p>
+        </div>
+        <div class="card">
+          <h3>Todo App</h3>
+          <p>Interactive task manager using local storage for persistence.</p>
+        </div>
+        <div class="card">
+          <h3>Weather App</h3>
+          <p>Real-time weather data fetched from an external API.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>If you’d like to work together or have a question, feel free to reach out.</p>
+      <p>
+        <i class="email-icon fas fa-envelope"></i>
+        Email: <a class="red" href="mailto:callmeghost4646@gmail.com">callmeghost4646@gmail.com</a>
+      </p>
+
+      <p>
+        <i class="github-icon fab fa-github"></i>
+        GitHub: <a class="grey" href="https://github.com/Riley245" target="_blank">github.com/Riley245</a>
+      </p>
+
+      <p>
+        <i class="linkedin-icon fab fa-linkedin"></i>
+        LinkedIn: <a class="eve" href="https://www.linkedin.com/in/ghost-riley-8976a8344" target="_blank">linkedin.com/in/ghost-riley</a>
+      </p>
+
+    </section>
+
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+  </script>
+
+</body>
+
+</html>
